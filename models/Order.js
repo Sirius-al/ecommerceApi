@@ -12,6 +12,8 @@ const OrderSchema = new mongoose.Schema(
         amount: { type: Number, required: true },
         address: { type: Object, required: true },
         status: { type: String, default: "pending" },
+        createdAt: { type: Date, default: Date.now },
+        updatedAt: { type: Date, default: Date.now },
     },
     { timeseries: true }
 );

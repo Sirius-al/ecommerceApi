@@ -7,8 +7,11 @@ const ProductSchema = new mongoose.Schema(
         price: { type: Number, required: true },
         img: { type: String, required: true },
         catagories: { type: Array },
-        size: { type: String },
-        color: { type: String },
+        size: { type: Array },
+        color: { type: Array },
+        inSrock: { type: Boolean, default: true },
+        createdAt: { type: Date, default: Date.now },
+        updatedAt: { type: Date, default: Date.now },
     },
     { timeseries: true }
 );
